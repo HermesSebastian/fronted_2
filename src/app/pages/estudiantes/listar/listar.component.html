@@ -1,0 +1,64 @@
+<div class="col-lg-12">
+    <nb-card>
+        <nb-card-header>
+            ADMINISTRACIÓN ESTUDIANTES 
+            <button type="button" class="btn btn-success" (click)="agregar()">
+                <i class="fas fa-plus"></i>
+            </button>
+        </nb-card-header>
+        <table class="table">
+            <tr>
+                <th *ngFor="let columaActual of nombresColumnas">{{columaActual}}</th>
+            </tr>
+            <ng-container *ngFor="let estudianteActual of estudiantes">
+                <tr>
+                    <td>{{estudianteActual.cedula}}</td>
+                    <td>{{estudianteActual.nombre}}</td>
+                    <td>{{estudianteActual.apellido}} </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" 
+                                (click)="editar(estudianteActual._id)">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger" 
+                                (click)="eliminar(estudianteActual._id)">
+                            <i class="fas fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+    </nb-card>
+</div><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Imagen de Fondo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.educaciontrespuntocero.com/wp-content/uploads/2021/03/libros-sobre-el-placer-de-leer.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; 
+            font-family: 'Arial', sans-serif; 
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Tu Contenido Aquí</h1>
+        <!-- Puedes agregar más contenido aquí -->
+    </div>
+</body>
+</html>
